@@ -1,0 +1,59 @@
+
+#menu {
+
+    width: 100%;
+    height: 50px;
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d6d6d6;
+}
+
+.menu_effect:hover{
+    background: #d6d6d6;
+}
+.menu_name{
+    width: 30px;
+    height: 15px;
+    font-size: 10px;
+    color: #7a7a7a;
+    text-align: center;
+}
+#homepage{
+    flex: 1;
+    flex-direction: column;
+}
+#homepage_img{
+    width: 25px;
+    height: 25px;
+    background-image: url(../resource/img/首页（选中）.svg);
+}
+
+#channel{
+    flex: 1;
+    flex-direction: column;
+}
+#channel_img{
+    width:25px;
+    height: 25px;
+    background-image: url(../resource/img/频道（未选中）.svg);
+}
+#active{
+    flex: 1;
+    flex-direction: column;
+}
+#active_img{
+    width: 25px;
+    height: 25px;
+    background-image: url(../resource/img/动态（未选中）.svg);
+}
+#shop{
+    flex: 1;
+    flex-direction: column;
+}
+#shop_img{
+    width: 25px;
+    height: 25px;
+    background-image: url(../resource/img/购物.svg);
+    background-size: 110%;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/container.css">
+    <link rel="stylesheet" href="../css/signal.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+</head>
+<body>
+
+
+    <div id="container" class="">
+
+        <!-- 状态栏开始 -->
+        <div id="signal">
+            <div id="signal-left" class="">
+                <div id="signal-area" class="">
+                    <div class="signal-ok"></div>
+                    <div class="signal-ok"></div>
+                    <div class="signal-ok"></div>
+                    <div class="signal-lose"></div>
+                </div>
+                <div id="operation" class="">中国电信</div>
+                <div id="xg" class="">4G</div>
+            </div>
+            <div id="signal-center" class=" xy-center">55:55</div>
+            <div id="signal-right" class="">
+                <div id="battery" class="">
+                    <div id="battery-body">
+                        <div id="battery-core" class="charging"></div>
+                    </div>
+                    <div id="battery-header"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 状态栏结束 -->
+
+        <!--------------------------------------->
+        <div id="switch" class=""></div>
+        <!--------------------------------------->
+
+        <!--菜单开始-->
+        <div id="menu" class="">
+            <div id="homepage" class="xy-center menu_effect" data-module="../page/switch/homepage-module.html">
+                <div id="homepage_img" class="img "></div>
+                <div  class="menu_name ">首页</div>
+            </div>
+            <div id="channel" class="xy-center  menu_effect" data-module="../page/switch/channel-module.html">
+                <div id="channel_img" class="img"></div>
+                <div class="menu_name">频道</div>
+            </div>
+            <div id="active" class="xy-center menu_effect" data-module="../page/switch/active-module.html">
+                <div id="active_img" class="img"></div>
+                <div class="menu_name">动态</div>
+            </div>
+            <div id="shop" class="xy-center menu_effect" data-module="../page/switch/shop-module.html">
+                <div id="shop_img" class="img"></div>
+                <div class="menu_name">会员购</div>
+            </div>
+        </div>
+        <!--菜单结束-->
+
+    </div>
+
+</body>
+</html>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../myjs/router.js"></script>
+<script src="../myjs/index.js"></script>
+<script src="../myjs/fixednav.js"></script>
+
+<script>
+    window.onscroll=function(){
+        var topScroll =document.body.scrollTop;//滚动的距离,距离顶部的距离
+        var bignav  = document.getElementById("navigation");//获取到导航栏id
+        if(topScroll > 50){  //当滚动距离大于250px时执行下面的东西
+            bignav.style.position = 'fixed';
+            bignav.style.top = '0';
+            bignav.style.zIndex = '9999';
+        }else{//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
+            bignav.style.position = 'static';
+        }
+    }
+</script>
+

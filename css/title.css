@@ -1,0 +1,312 @@
+
+#title {
+
+    width: 100%;
+    height: 60px;
+    background-color: #f97297;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+#side{
+    width: 10px;
+    height: 18px;
+    background-image: url(../resource/img/侧边栏.svg);
+}
+#head{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #cdcdcd;
+    background-image: url(../resource/img/bilibili.svg);
+    margin-left: 15px;
+}
+
+#channel_name{
+    flex: 1;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+}
+.side_tip{
+    display: none;
+    position: fixed;
+    width: 80vw;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px gray;
+    margin-top: -92px;
+}
+
+#side_tip_dynamic{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height:100%;
+
+}
+#side_title{
+    height: 182px;
+    background-color: #fa7298;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    padding-top: 32px;
+}
+#side_title_top{
+    flex: 2;
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-top: 5px;
+}
+#side_title_head_area{
+    flex:4 ;
+    margin-left: 15px;
+}
+#side_title_head{
+    height: 70px;
+    width: 70px;
+    background-color: #E4E7EE;
+    background-image: url(../resource/img/bilibili大.svg);
+}
+#side_title_wallet_area{
+    flex: 1;
+    height: 70px;
+    display: flex;
+    align-items: flex-start;
+}
+#side_title_wallet{
+    height:30px;
+    width: 30px;
+    background-image: url(../resource/img/钱包.svg);
+}
+#side_title_scan_area{
+    flex: 1;
+    height: 70px;
+    display: flex;
+    align-items: flex-start;
+}
+#side_title_scan{
+    height:30px;
+    width: 30px;
+    background-image: url(../resource/img/扫码.svg);
+}
+
+.side_title_look{
+    border-radius: 50%;
+    border: 1px solid white;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#side_title_bottom{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+}
+#stbname{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+#stbinfo{
+    color: #ffc1cf;
+    font-size: 12px;
+    font-weight: 200;
+    margin-left: 15px;
+}
+#side_title_bottom_name{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+
+}
+#side_title_bottom_info{
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+}
+
+
+
+
+
+
+
+
+
+#side_center{
+    height: 60px;
+    border-bottom:1px solid #d6d6d6;
+    display: flex;
+    justify-content: space-between;
+}
+.side_center_name{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+.side_center_font{
+     text-align: center;
+     font-size: 15px;
+    height: 30px;
+    line-height: 40px;
+ }
+.side_center_font2{
+    text-align: center;
+    font-size: 13px;
+    color: #818181;
+    height: 30px;
+    line-height: 25px;
+}
+.side_center_name:hover{
+    background-color: #d6d6d6;
+}
+#side_dynamic{
+    flex: 1;
+    overflow: scroll;
+}
+.side_list{
+    display: flex;
+    justify-content: flex-start;
+    height: 55px;
+    align-items: center;
+}
+.side_list_name{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.side_list_icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+.side_list:hover{
+    color: #f97297;
+    background-color: #d6d6d6;
+}
+
+
+#side_bottom{
+    height: 50px;
+    border-top:1px solid #d6d6d6 ;
+    display: flex;
+    justify-content: space-between;
+}
+#side_bottom_setup{
+    flex: 1;
+    flex-direction: row;
+
+}
+.side_bottom_look{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #818181;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#side_bottom_setup_img{
+    background-image: url(../resource/img/设置.svg);
+}
+#side_bottom_main{
+    flex: 1;
+    flex-direction: row;
+}
+#side_bottom_main_img{
+
+    background-image: url(../resource/img/主题.svg);
+}
+#side_bottom_night{
+    flex: 1;
+    flex-direction: row;
+}
+#side_bottom_night_img{
+    background-image: url(../resource/img/夜间模式.svg);
+}
+.side_bottom_name{
+    width: 30px;
+    font-size: 12px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+
+
+#search{
+    height: 30px;
+    flex: 1;
+    background-color: #e4678b;
+    border-radius: 15px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#search_img{
+    width: 15px;
+    height: 15px;
+    background-image: url(../resource/img/发现.svg);
+    margin-left: 10px;
+}
+#search_img2{
+    width: 20px;
+    height: 20px;
+    background-image: url(../resource/img/发现.svg);
+    margin-right: 10px;
+}
+
+
+#game{
+    height: 20px;
+    width: 20px;
+    background-image: url(../resource/img/游戏.svg);
+    margin: 0 8px 0 20px ;
+}
+.effect:hover{
+    border-radius: 50%;
+    background-color: #e4678b;
+}
+#download{
+    height: 20px;
+    width: 20px;
+    background-image: url(../resource/img/下载.svg);
+    margin: 9px;
+}
+#message{
+    height: 20px;
+    width: 20px;
+    background-image: url(../resource/img/消息.svg);
+    margin: 0 9px 0 8px;
+}
+
+#money{
+    height: 20px;
+    width: 20px;
+    background-image: url(../resource/img/优惠券.svg);
+    margin: 9px;
+}
+
+#shopping{
+    height: 20px;
+    width: 20px;
+    background-image: url(../resource/img/购物车1.svg);
+    margin: 9px;
+}
+
+
+#record{
+    height: 20px;
+    width: 20px;
+    background-image: url(../resource/img/记录.svg);
+}
