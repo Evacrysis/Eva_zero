@@ -1,23 +1,27 @@
 #switch{
     flex: 1;
     width: 100%;
-    height: 100%;
+    overflow: scroll;
     background-color: #f3f3f3;
 }
 
 #active_center_area{
     display: flex;
-    flex-flow: column;
-    align-items: center;
     justify-content: center;
-    height:400px
-
+    align-items: center;
+    height: 100%;
+}
+#active_center{
+    flex-flow: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-
-#active_center{
+#active_center_img{
     height: 180px;
     width: 250px;
+
 }
 
 #active_button{

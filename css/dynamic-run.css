@@ -110,15 +110,15 @@
     color: #818181;
 }
 
-
 .mange_area_main{
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
+    padding-left: calc((100% - 294px)/4);
+    padding-right: calc((100% - 294px)/4);
 }
 
 .manga_module{
-    width: 30%;
+    width: 98px;
 }
 
 .mange_module_img{
@@ -134,9 +134,8 @@
     background-color: rgba(0,0,0,0.3);
 }
 .mange_module_name{
-    height: 30px;
-    font-size: 13px;
-    line-height: 30px;
+    font-size: 12px;
+    flex-wrap: wrap;
 }
 .manga_moudle_update{
     height: 20px;

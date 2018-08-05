@@ -112,7 +112,9 @@
 
 #discovery_content_area{
      display: flex;
-     justify-content: space-evenly;
+     justify-content: space-between;
+     padding-left: calc((100% - 330px)/4);
+     padding-right: calc((100% - 330px)/4);
 }
 .discovery_module{
      width: 110px;
