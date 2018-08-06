@@ -10,7 +10,7 @@
 
 /*Content area*/
 
-#dynamic section {
+#dynamic_chat section {
 
     background-color: #feffff;
     width: 100%;
@@ -20,7 +20,7 @@
     position: absolute; transition: all 0.25s;
 
 }
-#dynamic section label {
+#dynamic_chat section label {
 
    position: absolute;
     cursor: pointer;
@@ -37,7 +37,6 @@
 #wrap {
     height: calc(100% - 128px);
     width: 100%;
-    border: solid #FFB6C1 1px;
     overflow: scroll;
     color: grey;
     font-family: "微软雅黑";
@@ -156,4 +155,34 @@
 #content{
     -web-kit-appearance:none;
     outline:0;
+}
+
+.title1{
+    width: 100%;
+    height: 46px;
+    background-color: #f97297;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title_left1{
+    color: white;
+    height: 20px;
+    flex: 1;
+
+}
+.title_name1{
+    font-size: 15px;
+    margin: 0 0 0 10px;
+}
+.title_center1{
+    color: white;
+    height: 20px;
+    width: 50px;
+}
+.title_right1{
+    color: white;
+    height: 20px;
+    width: 50px;
+    position: relative;
 }
