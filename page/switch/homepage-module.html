@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="../css/navigation.css">
 <link rel="stylesheet" href="../css/assistant.css">
 <link rel="stylesheet" href="../css/switch-homepage.css">
+<link rel="stylesheet" href="../css/dynamic.css">
 <script src="../js/jquery-3.3.1.js"></script>
 
 
@@ -14,7 +15,10 @@
     </div>
     <div id="game" class="img effect "></div>
     <div id="download" class="img effect"></div>
-    <div id="message" class="img effect"></div>
+    <label for="tm">
+        <div id="message" class="img effect"></div>
+    </label>
+
 </div>
 <!--顶栏结束-->
 
@@ -126,11 +130,52 @@
 <!--导航栏结束-->
 
 <!--滚动栏开始-->
-<div id="dynamic" class="">
-
-</div>
+<div id="dynamic" class=""></div>
 <!--滚动栏结束-->
 
+<!--历史记录开始-->
+<div id="dynamic_chat" class="">
+    <input type="checkbox" id="tm">
+
+
+    <section id="main">
+        <!--聊天栏顶部开始-->
+        <div class="title">
+
+            <div class="title_left">
+                <label for="tm" >
+                    <div class="title_name">&lt;gzs</div>
+                </label>
+            </div>
+
+            <div class="title_center" >
+                <div class="search" ></div>
+            </div>
+            <div class="title_right" >
+                <div class="add img" ></div>
+            </div>
+        </div>
+        <!--聊天栏顶部结束-->
+
+        <!--聊天内容开始-->
+        <div id="wrap" >
+            <div class="bg" ></div>
+        </div> <!-- 聊天容器 -->
+
+        <div id="send" >
+            <div id="send_voice" style="width: 30px;height: 30px;border-radius: 50%;border: 1px solid gray;margin-left:10px;" ></div>
+            <div id="send_text">
+                <input type="text" style="border: 0px" id="content" >
+            </div>
+            <div id="send_emj" style="width: 30px;height: 30px;border-radius: 50%;border: 1px solid gray;margin-right: 10px" ></div>
+            <div id="send_button" style="margin-right: 10px" ><label for="btn">发送</label></div>
+        </div>
+        <input type="button" id="btn" value="send" style="display: none"> <!-- 此处看上去像 按钮  就OK  -->
+        <!--聊天内容结束-->
+    </section>
+
+</div>
+<!--历史记录结束-->
 
 
 <script src="../myjs/index.js"></script>
@@ -160,4 +205,43 @@
     //     })
     // })
 
+</script>
+<script>
+    $(function() {
+
+        var key = "aae640cb209b43959104fe3efc665502";
+        var url = "http://www.tuling123.com/openapi/api";   //openAPI
+
+        $('#btn').click(function() {  //当点击时
+
+            var info = {
+                "key": key,
+                "info": $("#content").val()
+            }   //向图灵 发送 聊天数据     .val  =  value
+
+            //生成自己的聊天内容
+            var self = $("<div class='me'>\n" +
+                "                <div class='me_head'></div>\n" +
+                "                <div class='me_msg'>"+"<p>"+$("#content").val()+"</p>"+"</div>")
+            $("#wrap").append(self)
+
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: info,
+                dataType: "json",
+                success: function(result) {
+                    var robot = $("<div class='tom'>\n" +
+                        "                <div class='tom_head'></div>\n" +
+                        "                <div class='tom_msg'>"+"<p>"+result.text +"</p>"+"</div>")
+
+                    $("#wrap").append(robot)
+
+                }
+            });
+
+        })
+
+    })
 </script>
